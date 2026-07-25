@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olive Grove Events — Event Rentals, Fraser Valley &amp; Lower Mainland</title>
+<meta name="description" content="Tables, chairs, linens and canopy tents for weddings and events. Based in Chilliwack, serving the Fraser Valley and Lower Mainland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --grove:#5C6247;
+  --grove-deep:#454A36;
+  --linen:#EDEAE0;
+  --bone:#F7F5EF;
+  --ink:#2B2E24;
+  --brass:#B08D57;
+  --rule:rgba(92,98,71,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+body{
+  margin:0;
+  background:var(--bone);
+  color:var(--ink);
+  font-family:'Jost',system-ui,sans-serif;
+  font-weight:300;
+  font-size:17px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Cormorant',Georgia,serif;font-weight:300;margin:0;line-height:1.1}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 28px}
+.eyebrow{
+  font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;
+  font-weight:400;color:var(--brass);margin:0 0 18px
+}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(92,98,71,.97);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(237,234,224,.14);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:20px}
+.nav-mark{
+  font-family:'Cormorant',serif;font-size:1.12rem;letter-spacing:.3em;
+  color:var(--linen);text-decoration:none;white-space:nowrap;
+}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{
+  color:rgba(237,234,224,.82);text-decoration:none;
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:4px 0;border-bottom:1px solid transparent;transition:.25s
+}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--linen);border-bottom-color:var(--brass)}
+@media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+.nav-cta{border:1px solid rgba(237,234,224,.4)!important;padding:8px 16px!important;border-radius:2px}
+.nav-cta:hover{background:rgba(237,234,224,.1)}
+
+/* ---------- hero ---------- */
+.hero{
+  background:var(--grove);
+  color:var(--linen);
+  padding:118px 0 108px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:26px;
+  border:1px solid rgba(237,234,224,.18);pointer-events:none
+}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto}
+.hero h1{
+  font-size:clamp(2.9rem,8vw,5.4rem);
+  letter-spacing:.14em;text-transform:uppercase;
+  margin:0 0 14px;
+}
+.hero-sub{
+  font-size:.74rem;letter-spacing:.5em;text-transform:uppercase;
+  color:rgba(237,234,224,.7);margin:0 0 40px
+}
+.hero-line{
+  width:70px;height:1px;background:var(--brass);margin:0 auto 40px
+}
+.hero-lede{
+  font-family:'Cormorant',serif;font-size:clamp(1.3rem,3vw,1.75rem);
+  font-style:italic;line-height:1.55;color:rgba(237,234,224,.94);
+  margin:0 auto 44px;max-width:560px
+}
+.btn{
+  display:inline-block;text-decoration:none;
+  font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
+  padding:16px 40px;border-radius:2px;transition:.25s;cursor:pointer;
+  font-family:'Jost',sans-serif;font-weight:400
+}
+.btn-light{background:var(--linen);color:var(--grove-deep);border:1px solid var(--linen)}
+.btn-light:hover{background:transparent;color:var(--linen)}
+.btn-dark{background:var(--grove);color:var(--linen);border:1px solid var(--grove)}
+.btn-dark:hover{background:var(--grove-deep);border-color:var(--grove-deep)}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.section-head{text-align:center;max-width:620px;margin:0 auto 62px}
+.section-head h2{font-size:clamp(2rem,5vw,3rem);letter-spacing:.05em;margin-bottom:18px}
+.section-head p{color:rgba(43,46,36,.72);margin:0}
+
+/* ---------- catalog ---------- */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:34px}
+.card{background:#fff;border:1px solid var(--rule);border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
+.ph{
+  aspect-ratio:4/3;background:var(--linen);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(92,98,71,.5);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;
+  border-bottom:1px solid var(--rule);text-align:center;padding:12px
+}
+.ph-img{aspect-ratio:4/3;overflow:hidden;border-bottom:1px solid var(--rule)}
+.ph-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card:hover .ph-img img{transform:scale(1.04)}
+.card-body{padding:30px 28px 32px}
+.card h3{font-size:1.6rem;letter-spacing:.06em;margin-bottom:10px}
+.card ul{margin:16px 0 0;padding:0;list-style:none}
+.card li{
+  font-size:.92rem;padding:9px 0;border-bottom:1px solid var(--rule);
+  color:rgba(43,46,36,.78)
+}
+.card li:last-child{border-bottom:none}
+
+/* ---------- delivery ---------- */
+.delivery{background:var(--grove-deep);color:var(--linen)}
+.delivery .section-head h2{color:var(--linen)}
+.delivery .section-head p{color:rgba(237,234,224,.75)}
+.rates{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:rgba(237,234,224,.16);border:1px solid rgba(237,234,224,.16)}
+.rate{background:var(--grove-deep);padding:38px 26px;text-align:center}
+.rate .where{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+.rate .price{font-family:'Cormorant',serif;font-size:2.6rem;line-height:1;margin-bottom:10px}
+.rate .note{font-size:.86rem;color:rgba(237,234,224,.7);margin:0}
+.delivery-foot{text-align:center;margin-top:34px;font-size:.92rem;color:rgba(237,234,224,.7)}
+
+/* ---------- estimator ---------- */
+.est{background:#fff;border:1px solid var(--rule);border-radius:2px;max-width:860px;margin:0 auto;overflow:hidden}
+.est-items{padding:12px 30px}
+.est-row{display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:center;padding:18px 0;border-bottom:1px solid var(--rule)}
+.est-row:last-child{border-bottom:none}
+.est-name{font-size:1.02rem}
+.est-name small{display:block;font-size:.78rem;color:rgba(43,46,36,.55);letter-spacing:.04em}
+.est-unit{font-size:.86rem;color:rgba(43,46,36,.6);white-space:nowrap}
+.qty{display:flex;align-items:center;gap:0;border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+.qty button{
+  width:38px;height:40px;border:none;background:var(--linen);color:var(--grove-deep);
+  font-size:1.1rem;cursor:pointer;font-family:'Jost',sans-serif;line-height:1
+}
+.qty button:hover{background:var(--grove);color:var(--linen)}
+.qty input{width:62px;height:40px;border:none;border-left:1px solid var(--rule);border-right:1px solid var(--rule);text-align:center;padding:0;font-size:1rem;border-radius:0}
+.qty input:focus{outline:2px solid var(--grove);outline-offset:-2px}
+.est-delnote{font-size:.86rem;color:rgba(43,46,36,.6);margin:0}
+.est-delivery{padding:26px 30px;background:var(--linen);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.est-delivery .drow{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end}
+@media(max-width:640px){.est-delivery .drow{grid-template-columns:1fr}.est-row{grid-template-columns:1fr auto;gap:10px}.est-unit{grid-column:1/-1;order:3}}
+.est-total{background:var(--grove);color:var(--linen);padding:30px}
+.tline{display:flex;justify-content:space-between;padding:9px 0;font-size:.98rem;color:rgba(237,234,224,.85)}
+.tline.grand{
+  border-top:1px solid rgba(237,234,224,.28);margin-top:12px;padding-top:20px;
+  font-family:'Cormorant',serif;font-size:2rem;color:var(--linen);align-items:baseline
+}
+.tline.dep{font-size:.88rem;color:rgba(237,234,224,.65)}
+.est-cta{text-align:center;padding:28px 30px;background:#fff}
+.est-fine{font-size:.84rem;color:rgba(43,46,36,.6);max-width:860px;margin:20px auto 0;text-align:center}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.gal .ph{aspect-ratio:1;border:1px solid var(--rule)}
+.gal .ph.tall{aspect-ratio:2/3}
+.gal .ph-img{aspect-ratio:1;border:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.gal .ph-img.wide{grid-column:span 2;aspect-ratio:2/1}
+@media(max-width:640px){.gal .ph-img.wide{grid-column:span 1;aspect-ratio:4/3}}
+
+/* ---------- form ---------- */
+.quote{background:var(--linen)}
+form{max-width:680px;margin:0 auto;display:grid;gap:22px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:640px){.row{grid-template-columns:1fr}}
+label{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:9px;color:rgba(43,46,36,.75)}
+input,select,textarea{
+  width:100%;padding:14px 15px;border:1px solid var(--rule);border-radius:2px;
+  background:#fff;font-family:'Jost',sans-serif;font-weight:300;font-size:1rem;color:var(--ink)
+}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--grove);outline-offset:1px;border-color:var(--grove)}
+textarea{resize:vertical;min-height:120px}
+.fieldset{border:none;padding:0;margin:0}
+.checks{display:flex;flex-wrap:wrap;gap:12px}
+.check{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--rule);padding:11px 16px;border-radius:2px;cursor:pointer;font-size:.92rem}
+.check input{width:auto;padding:0}
+.form-actions{text-align:center;margin-top:6px}
+.form-note{text-align:center;font-size:.86rem;color:rgba(43,46,36,.6);margin:14px 0 0}
+.status{text-align:center;padding:14px;border-radius:2px;font-size:.94rem;display:none}
+.status.show{display:block}
+.status.ok{background:var(--grove);color:var(--linen)}
+
+/* ---------- placeholder notice ---------- */
+.placeholder-note{
+  background:#F3E7D3;border:1px solid #C9A96A;border-radius:2px;
+  padding:16px 22px;margin:0 auto 46px;max-width:760px;text-align:center;
+  font-size:.9rem;color:#6B5426
+}
+.placeholder-note strong{font-weight:500}
+
+/* ---------- footer ---------- */
+footer{background:var(--grove);color:var(--linen);padding:64px 0 46px;text-align:center}
+footer .mark{font-family:'Cormorant',serif;font-size:1.5rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:8px}
+footer .sub{font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(237,234,224,.6);margin-bottom:26px}
+footer a.mail{color:var(--linen);letter-spacing:.12em;font-size:.94rem;text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:2px}
+footer .fine{margin-top:30px;font-size:.78rem;color:rgba(237,234,224,.5)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="nav-mark">OLIVE GROVE</a>
+    <div class="nav-links">
+      <a href="#rentals">Rentals</a>
+      <a href="#estimator">Estimate</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#quote" class="nav-cta">Request a quote</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-inner">
+    <h1>Olive Grove</h1>
+    <p class="hero-sub">Events</p>
+    <div class="hero-line"></div>
+    <p class="hero-lede">Tables, chairs, linens and canopies for weddings and gatherings across the Fraser Valley and Lower Mainland.</p>
+    <a href="#quote" class="btn btn-light">Request a quote</a>
+  </div>
+</header>
+
+<section id="rentals">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What we rent</p>
+      <h2>Rentals</h2>
+      <p>Everything you need to seat, shelter and set a table — delivered, set up and collected.</p>
+    </div>
+    <p class="placeholder-note"><strong>Placeholder images.</strong> These are stand-ins while the site is being built — remove this notice and swap in photos of your own inventory before going live.</p>
+    <div class="cat-grid">
+
+      <article class="card">
+        <div class="ph-img"><img src="images/white-folding-chairs.jpg" alt="White resin folding chairs set up on grass for an outdoor ceremony"></div>
+        <div class="card-body">
+          <h3>Tables &amp; Chairs</h3>
+          <p>Seating and surfaces for receptions, ceremonies and long-table dinners.</p>
+          <ul>
+            <li>Round tables — seats 8 to 10</li>
+            <li>Rectangular banquet tables</li>
+            <li>Cocktail and cake tables</li>
+            <li>Wood folding chairs</li>
+            <li>White resin chairs</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="ph-img"><img src="images/table-linens.jpg" alt="Long banquet table dressed with a floor-length white cloth, linen runner and folded napkins"></div>
+        <div class="card-body">
+          <h3>Linens</h3>
+          <p>Pressed and ready. Choose by table size and colour when you request your quote.</p>
+          <ul>
+            <li>Floor-length tablecloths</li>
+            <li>Table runners</li>
+            <li>Cloth napkins</li>
+            <li>Chair sashes</li>
+            <li>Neutral and seasonal colours</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="ph">Photo — tent</div>
+        <div class="card-body">
+          <h3>Canopy Tents</h3>
+          <p>White 10&#39; × 10&#39; canopies for shade, shelter and serving stations. We set up and take down.</p>
+          <ul>
+            <li>White 10&#39; × 10&#39; canopy tents</li>
+            <li>Rent as many as your site needs</li>
+            <li>Good for bars, gift and dessert tables</li>
+            <li>Staked or weighted to suit the ground</li>
+            <li>Setup and collection included</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="estimator">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Build your order</p>
+      <h2>Estimate your cost</h2>
+      <p>Add what you need and see the cost as you go. No contact details required.</p>
+    </div>
+
+    <div class="est">
+      <div class="est-items" id="estItems">
+        <div class="est-row" data-price="100" data-deposit="100">
+          <div class="est-name">Canopy tents<small>White, 10&#39; × 10&#39;</small></div>
+          <div class="est-unit">$100.00 each</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease canopy tents" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of canopy tents">
+            <button type="button" aria-label="Increase canopy tents" data-step="1">+</button>
+          </div>
+        </div>
+        <div class="est-row" data-price="4" data-deposit="2">
+          <div class="est-name">Chairs<small>White resin folding</small></div>
+          <div class="est-unit">$4.00 each</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease chairs" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of chairs">
+            <button type="button" aria-label="Increase chairs" data-step="1">+</button>
+          </div>
+        </div>
+        <div class="est-row" data-price="9" data-deposit="5">
+          <div class="est-name">Tables<small>Round or rectangular</small></div>
+          <div class="est-unit">$9.00 each</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease tables" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of tables">
+            <button type="button" aria-label="Increase tables" data-step="1">+</button>
+          </div>
+        </div>
+        <div class="est-row" data-price="5">
+          <div class="est-name">Tablecloths<small>Floor-length</small></div>
+          <div class="est-unit">$5.00 each</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease tablecloths" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of tablecloths">
+            <button type="button" aria-label="Increase tablecloths" data-step="1">+</button>
+          </div>
+        </div>
+        <div class="est-row" data-price="1">
+          <div class="est-name">Napkins<small>Cloth</small></div>
+          <div class="est-unit">$1.00 each</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease napkins" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of napkins">
+            <button type="button" aria-label="Increase napkins" data-step="1">+</button>
+          </div>
+        </div>
+        <div class="est-row" data-price="2">
+          <div class="est-name">Plate chargers</div>
+          <div class="est-unit">$2.00 each</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease plate chargers" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of plate chargers">
+            <button type="button" aria-label="Increase plate chargers" data-step="1">+</button>
+          </div>
+        </div>
+        <div class="est-row" data-price="1" data-cutlery="1">
+          <div class="est-name">Cutlery sets<small>$75 flat at 95 sets or more</small></div>
+          <div class="est-unit">$1.00 per set</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease cutlery sets" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of cutlery sets">
+            <button type="button" aria-label="Increase cutlery sets" data-step="1">+</button>
+          </div>
+        </div>
+        <div class="est-row" data-price="45">
+          <div class="est-name">A-board sign with bloom box<small>Includes floral bloom box</small></div>
+          <div class="est-unit">$45.00 each</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease A-board signs with bloom box" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of A-board signs with bloom box">
+            <button type="button" aria-label="Increase A-board signs with bloom box" data-step="1">+</button>
+          </div>
+        </div>
+        <div class="est-row" data-price="35">
+          <div class="est-name">A-board sign<small>Sign only</small></div>
+          <div class="est-unit">$35.00 each</div>
+          <div class="qty">
+            <button type="button" aria-label="Decrease A-board signs" data-step="-1">−</button>
+            <input type="number" min="0" value="0" aria-label="Number of A-board signs">
+            <button type="button" aria-label="Increase A-board signs" data-step="1">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="est-delivery">
+        <div class="drow">
+          <div>
+            <label for="deliveryCity">Delivery location</label>
+            <select id="deliveryCity">
+              <option value="100" data-label="Chilliwack">Chilliwack — $100</option>
+              <option value="100" data-label="Rosedale">Rosedale — $100</option>
+              <option value="100" data-label="Sardis">Sardis — $100</option>
+              <option value="100" data-label="Agassiz">Agassiz — $100</option>
+              <option value="100" data-label="Harrison Hot Springs">Harrison Hot Springs — $100</option>
+              <option value="100" data-label="Popkum / Bridal Falls">Popkum / Bridal Falls — $100</option>
+              <option value="140" data-label="Abbotsford">Abbotsford — $140</option>
+              <option value="150" data-label="Mission">Mission — $150</option>
+              <option value="200" data-label="Aldergrove">Aldergrove — $200</option>
+              <option value="250" data-label="Hope">Hope — $250</option>
+              <option value="250" data-label="Langley">Langley — $250</option>
+              <option value="250" data-label="Maple Ridge">Maple Ridge — $250</option>
+              <option value="250" data-label="Pitt Meadows">Pitt Meadows — $250</option>
+              <option value="250" data-label="New Westminster">New Westminster — $250</option>
+              <option value="250" data-label="Coquitlam">Coquitlam — $250</option>
+              <option value="300" data-label="Surrey">Surrey — $300</option>
+              <option value="300" data-label="Delta">Delta — $300</option>
+              <option value="300" data-label="Burnaby">Burnaby — $300</option>
+              <option value="400" data-label="Richmond">Richmond — $400</option>
+              <option value="400" data-label="Vancouver">Vancouver — $400</option>
+              <option value="ask" data-label="Somewhere else">Somewhere else — we'll quote it</option>
+            </select>
+          </div>
+          <div>
+            <p class="est-delnote">Round-trip delivery, including setup and collection. Don't see your venue? Choose "somewhere else" and we'll work it out.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="est-total">
+        <div class="tline"><span>Rentals</span><span id="tRent">$0.00</span></div>
+        <div class="tline"><span id="tDelLabel">Delivery</span><span id="tDel">$0.00</span></div>
+        <div class="tline grand"><span>Estimated total</span><span id="tGrand">$0.00</span></div>
+        <div class="tline dep"><span>Refundable damage deposit</span><span id="tDep">$0.00</span></div>
+      </div>
+
+      <div class="est-cta">
+        <a href="#quote" class="btn btn-dark" id="estToQuote">Request this as a quote</a>
+      </div>
+    </div>
+
+    <p class="est-fine">This is an estimate, not a booking or a binding quote. Taxes are not included. The damage deposit is refundable and applies to chairs and tables only. Final pricing is confirmed in writing once we have your date and venue.</p>
+  </div>
+</section>
+
+<section class="delivery" id="delivery">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Where we go</p>
+      <h2>Delivery</h2>
+      <p>We're based in Chilliwack and travel throughout the Fraser Valley and Lower Mainland.</p>
+    </div>
+    <div class="rates">
+      <div class="rate">
+        <p class="where">Chilliwack &amp; area</p>
+        <p class="price">$100</p>
+        <p class="note">Sardis, Rosedale, Agassiz, Harrison, Bridal Falls</p>
+      </div>
+      <div class="rate">
+        <p class="where">Fraser Valley</p>
+        <p class="price">$140–200</p>
+        <p class="note">Abbotsford, Mission, Aldergrove</p>
+      </div>
+      <div class="rate">
+        <p class="where">Lower Mainland</p>
+        <p class="price">$250–400</p>
+        <p class="note">Hope, Langley through to Vancouver</p>
+      </div>
+    </div>
+    <p class="delivery-foot">Pick your town in the estimator above to see the exact delivery cost. Somewhere not listed? Ask us — nowhere in the Lower Mainland is too far.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Recent events</p>
+      <h2>Gallery</h2>
+      <p>A look at how we set up.</p>
+    </div>
+    <div class="gal">
+      <div class="ph-img wide"><img src="images/ceremony-setup.jpg" alt="Outdoor ceremony seating with white chairs, floral arch and mountain view"></div>
+      <div class="ph-img"><img src="images/white-folding-chairs.jpg" alt="Close view of white folding chairs with padded seats on grass"></div>
+      <div class="ph">Photo</div>
+      <div class="ph">Photo</div>
+      <div class="ph">Photo</div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Start here</p>
+      <h2>Request a quote</h2>
+      <p>Tell us the date, the venue and roughly how many guests. We'll come back with a written quote.</p>
+    </div>
+
+    <form id="quoteForm" novalidate>
+      <div class="row">
+        <div>
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel">
+        </div>
+        <div>
+          <label for="date">Event date</label>
+          <input id="date" name="date" type="date">
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="venue">Venue or town</label>
+          <input id="venue" name="venue" type="text" placeholder="e.g. Chilliwack, Abbotsford, Langley">
+        </div>
+        <div>
+          <label for="guests">Guest count</label>
+          <input id="guests" name="guests" type="number" min="1" placeholder="Approximate is fine">
+        </div>
+      </div>
+
+      <fieldset class="fieldset">
+        <label>What do you need?</label>
+        <div class="checks">
+          <label class="check"><input type="checkbox" name="items" value="Tables"> Tables</label>
+          <label class="check"><input type="checkbox" name="items" value="Chairs"> Chairs</label>
+          <label class="check"><input type="checkbox" name="items" value="Linens"> Linens</label>
+          <label class="check"><input type="checkbox" name="items" value="Canopy tent"> Canopy tent</label>
+          <label class="check"><input type="checkbox" name="items" value="Not sure yet"> Not sure yet</label>
+        </div>
+      </fieldset>
+
+      <div id="estSummaryWrap" style="display:none">
+        <label for="estSummary">Your estimate</label>
+        <textarea id="estSummary" name="estSummary" readonly style="min-height:auto;height:auto"></textarea>
+      </div>
+
+      <div>
+        <label for="details">Anything else</label>
+        <textarea id="details" name="details" placeholder="Colours, timing, site access, or anything we should know."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-dark">Send request</button>
+        <p class="form-note">Or email us directly at olivegroveeventsbc@gmail.com</p>
+      </div>
+
+      <div class="status" id="status" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="mark">Olive Grove</p>
+    <p class="sub">Events</p>
+    <a class="mail" href="mailto:olivegroveeventsbc@gmail.com">olivegroveeventsbc@gmail.com</a>
+    <p class="fine">Chilliwack, BC — serving the Fraser Valley and Lower Mainland</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- estimator ---------- */
+(function(){
+  var rows = [].slice.call(document.querySelectorAll('#estItems .est-row'));
+  var city = document.getElementById('deliveryCity');
+  var money = function(n){ return '$' + n.toFixed(2); };
+
+  function calc(){
+    var rent = 0, dep = 0, lines = [];
+
+    rows.forEach(function(row){
+      var input = row.querySelector('input');
+      var q = parseInt(input.value, 10);
+      if(isNaN(q) || q < 0){ q = 0; input.value = 0; }
+      if(q === 0) return;
+
+      var price = parseFloat(row.dataset.price);
+      var name = row.querySelector('.est-name').childNodes[0].textContent.trim();
+      var sub;
+
+      if(row.dataset.cutlery && q >= 95){
+        sub = 75;
+      } else {
+        sub = q * price;
+      }
+
+      rent += sub;
+      if(row.dataset.deposit) dep += q * parseFloat(row.dataset.deposit);
+      lines.push(q + ' × ' + name + ' — ' + money(sub));
+    });
+
+    var opt = city.options[city.selectedIndex];
+    var place = opt.dataset.label;
+    var ask = opt.value === 'ask';
+    var d = ask ? 0 : parseFloat(opt.value);
+    var dLabel = 'Delivery — ' + place;
+    var dText = ask ? 'Quoted separately' : money(d);
+
+    document.getElementById('tRent').textContent = money(rent);
+    document.getElementById('tDel').textContent = dText;
+    document.getElementById('tDelLabel').textContent = dLabel;
+    document.getElementById('tGrand').textContent = money(rent + d) + (ask ? ' + delivery' : '');
+    document.getElementById('tDep').textContent = money(dep);
+
+    window.__estimate = lines.length
+      ? lines.join('\n') + '\n' + dLabel + ' — ' + dText
+        + '\nEstimated total: ' + money(rent + d) + (ask ? ' plus delivery' : '')
+        + '\nRefundable deposit: ' + money(dep)
+      : '';
+  }
+
+  rows.forEach(function(row){
+    var input = row.querySelector('input');
+    row.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){
+        var v = parseInt(input.value, 10);
+        if(isNaN(v)) v = 0;
+        input.value = Math.max(0, v + parseInt(b.dataset.step, 10));
+        calc();
+      });
+    });
+    input.addEventListener('input', calc);
+  });
+  city.addEventListener('change', calc);
+
+  document.getElementById('estToQuote').addEventListener('click', function(){
+    var t = document.getElementById('estSummary');
+    var wrap = document.getElementById('estSummaryWrap');
+    if(window.__estimate){
+      t.value = window.__estimate;
+      wrap.style.display = '';
+      t.style.height = 'auto';
+      t.style.height = (t.scrollHeight + 4) + 'px';
+    }
+  });
+
+  calc();
+})();
+
+/* ---------- quote form ---------- */
+document.getElementById('quoteForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target, s = document.getElementById('status');
+  if(!f.name.value.trim() || !f.email.value.trim()){
+    s.className = 'status show';
+    s.style.background = '#8B3A2F'; s.style.color = '#EDEAE0';
+    s.textContent = 'Add your name and email so we can send the quote back.';
+    return;
+  }
+  var items = [].slice.call(f.querySelectorAll('input[name=items]:checked')).map(function(c){return c.value;}).join(', ');
+  var body = 'Name: '+f.name.value+'\n'
+    +'Email: '+f.email.value+'\n'
+    +'Phone: '+f.phone.value+'\n'
+    +'Event date: '+f.date.value+'\n'
+    +'Venue or town: '+f.venue.value+'\n'
+    +'Guests: '+f.guests.value+'\n'
+    +'Needs: '+items+'\n\n'
+    +(window.__estimate ? 'ESTIMATE FROM SITE:\n'+window.__estimate+'\n\n' : '')
+    +f.details.value;
+  window.location.href = 'mailto:olivegroveeventsbc@gmail.com?subject='
+    + encodeURIComponent('Quote request — '+f.name.value)
+    + '&body=' + encodeURIComponent(body);
+  s.className = 'status show ok';
+  s.style.background=''; s.style.color='';
+  s.textContent = 'Opening your email app with the request ready to send.';
+});
+</script>
+
+</body>
+</html>
