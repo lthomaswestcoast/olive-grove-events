@@ -127,7 +127,8 @@ section{padding:96px 0}
   border-bottom:1px solid var(--rule);text-align:center;padding:12px
 }
 .ph-img{aspect-ratio:4/3;overflow:hidden;border-bottom:1px solid var(--rule)}
-.ph-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.ph-img img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s ease}
+.ph-img img.top{object-position:center top}
 .card:hover .ph-img img{transform:scale(1.04)}
 .card-body{padding:30px 28px 32px}
 .card h3{font-size:1.6rem;letter-spacing:.06em;margin-bottom:10px}
@@ -289,7 +290,7 @@ footer .fine{margin-top:30px;font-size:.78rem;color:rgba(237,234,224,.5)}
       </article>
 
       <article class="card">
-        <div class="ph-img"><img src="images/canopy-tent.jpg" alt="White canopy tent set up over a round table with white chairs at an outdoor event"></div>
+        <div class="ph-img"><img src="images/canopy-tent.jpg" class="top" alt="White canopy tent set up over a round table with white chairs at an outdoor event"></div>
         <div class="card-body">
           <h3>Canopy Tents</h3>
           <p>White 10&#39; × 10&#39; canopies for shade, shelter and serving stations.</p>
